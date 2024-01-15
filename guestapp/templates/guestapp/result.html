@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Result is </h1>
+    <hr>
+    <h2>Subject and Marks Information</h2>
+    <table border="1">
+    {% for key,value in subjectinfo.items %}
+     <tr><td>{{key}}</td></tr>
+     <tr><td>{{value}}</td></tr>
+
+    {% endfor %}
+    </table>
+    <hr>
+    {{key}}
+</body>
+</html>

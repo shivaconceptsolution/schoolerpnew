@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <select name="ddlcourse">
+            <option value="">Select Course</option>
+            <option value="C" {% if key == "C" %} selected {% endif %}>C</option>
+            <option value="C++" {% if key == "C++" %} selected {% endif %}>C++</option>
+            <option value="DS" {% if key == "DS" %} selected {% endif %}>DS</option>
+            <option value="PYTHON" {% if key == "PYTHON" %} selected {% endif %}>PYTHON</option>
+            <option value="R" {% if key == "R" %} selected {% endif %}>R</option>
+            <option value="GO" {% if key == "GO" %} selected {% endif %}>GO</option>
+        </select>
+        <input type="submit" name="btnsubmit" value="Submit" />
+  
+      </form>
+
+      {%  if key  %}
+
+        <p>Selected Course is {{key}}</p>
+      {%  endif %}
+</body>
+</html>

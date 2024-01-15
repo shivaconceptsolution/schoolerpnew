@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <input type="checkbox" name="course" value="C" {% if "C" in key %} checked {% endif %} />C <br>
+      <input type="checkbox" name="course" value="CPP" {% if "CPP" in key %} checked {% endif %} />CPP <br>
+      <input type="checkbox" name="course" value="DS" {% if "DS" in key %} checked {% endif %} />DS <br>
+      <input type="checkbox" name="course" value="JAVA" {% if "JAVA" in key %} checked {% endif %} />JAVA <br>
+      <input type="checkbox" name="course" value="PYTHON" {% if "PYTHON" in key %} checked {% endif %} />PYTHON <br>
+      <input type="submit" name="btnsubmit" value="Submit" />
+
+    </form>
+    {% if key %}
+        <p>Selected Course is {{key}}</p>
+
+    {% endif %}
+</body>
+</html>

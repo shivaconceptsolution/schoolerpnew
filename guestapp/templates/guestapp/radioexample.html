@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor={{key}}>
+    <form action="" method="post">
+      {% csrf_token %}
+      <input type="radio" name="course" value="RED" {% if key == "RED" %} checked {% endif %} />RED <br>
+      <input type="radio" name="course" value="GREEN" {% if key == "GREEN" %} checked {% endif %} />GREEN <br>
+      <input type="submit" name="btnsubmit" value="Submit" />
+
+    </form>
+    {% if key %}
+        <p>Selected Course is {{key}}</p>
+
+    {% endif %}
+</body>
+</html>

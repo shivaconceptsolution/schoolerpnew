@@ -1,0 +1,25 @@
+{% extends 'parentsapp/master.html' %}
+{% block middlesection %}
+<br><br><br><br><br>
+<center>
+    <h1>Login here</h1>
+<div class="blog_section">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+          <input type="text" placeholder="Enter emailid" name="txtemail" />
+        </div>
+        <div>
+          <input type="password" placeholder="Enter password" name="txtpass" />
+        </div>
+       
+        <div class="btn_box">
+          <button type="submit">
+           Login
+          </button>
+        </div>
+      </form>
+      {{key}}
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function searchdata(a)
+        {
+            var xmlhttp = new XMLHttpRequest(); //xmlobject
+            xmlhttp.onreadystatechange=function() //after response
+            {
+             document.getElementById("result").innerHTML = xmlhttp.responseText; //output
+            }
+            xmlhttp.open("GET","/coursestudent/ajaxdata?q="+a,true); //request
+            xmlhttp.send(); //request
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter content to search" onkeyup="searchdata(this.value)" />
+    <div id="result"></div>
+</body>
+</html>
